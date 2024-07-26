@@ -9,6 +9,7 @@ import Logo from "./logo.png?url"
 import EnergyImg from "./energy.jpg";
 import PropertyImg from "./property.jpg";
 import CommercialImg from "./commercial.jpg";
+import CommercialTwoImg from "./commercial_two.jpg";
 import OffsetImg from "./offset.jpg";
 import ProjectImg from "./project.jpg";
 import ArticleOne from "./article_1.jpg"
@@ -27,6 +28,14 @@ import ProjectThree from "./project_three.jpg?url"
 import ProjectFour from "./project_four.jpg?url"
 import ProjectSix from "./project_six.jpg?url"
 import ProjectTwo from "./project_two.jpg?url"
+import MemberOne from "./member_one.jpg?url"
+import MemberTwo from "./member_two.jpg?url"
+import MemberThree from "./member_three.jpg?url"
+import MemberFour from "./member_four.jpg?url"
+import MemberFive from "./member_five.jpg?url"
+import MemberSix from "./member_six.jpg?url"
+import MemberSeven from "./member_seven.jpg?url"
+import MemberEight from "./member_eight.jpg?url"
 
 export {
     SlideOne,
@@ -39,6 +48,7 @@ export {
     EnergyImg,
     PropertyImg,
     CommercialImg,
+    CommercialTwoImg,
     OffsetImg,
     ProjectImg,
     ArticleOne,
@@ -56,5 +66,13 @@ export {
     ProjectThree,
     ProjectFour,
     ProjectSix,
-    ProjectTwo
+    ProjectTwo,
+    MemberOne,
+    MemberTwo,
+    MemberThree,
+    MemberFour,
+    MemberFive,
+    MemberSix,
+    MemberSeven,
+    MemberEight
 }
