@@ -1,0 +1,18 @@
+:root {
+    --deepBlue: #243973;
+    --darkBlue: #12263A;
+    --green: #43b549;
+    --lightGrey: #e5e5e5;
+}
+
+.mySwiper {
+    z-index: 1;
+}
+
+._solutions_card:nth-child(2) {
+    background-color: #00d084;
+}
+
+._solutions_card:nth-child(2) > div  {
+    background-color: var(--white);
+}
