@@ -19,7 +19,15 @@ import {
     PropertyImg, 
     SlideFive, 
     SlideFour,
-    ProjectTwo
+    ProjectTwo,
+    MemberOne,
+    MemberTwo,
+    MemberThree,
+    MemberFour,
+    MemberFive,
+    MemberSix,
+    MemberSeven,
+    MemberEight
 } from "@assets/images"
 import { LiaToolsSolid } from "react-icons/lia";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -35,6 +43,9 @@ import { PiFolders } from "react-icons/pi";
 import { PiBaseballHelmet } from "react-icons/pi";
 import { SlBadge } from "react-icons/sl";
 import { SlSupport } from "react-icons/sl";
+import { MdOutlineEmail } from "react-icons/md";
+import { FiPhone } from "react-icons/fi";
+import { SlLocationPin } from "react-icons/sl";
 
 export const navlist = [
     {
@@ -369,4 +380,105 @@ export const projects = [
         description: 'Justo dictumst id semper taciti lacus tortor per si habitasse platea vestibulum.',
         icon: PiCarBatteryLight
     },
+]
+
+export const members = [
+    {
+        img: MemberOne,
+        name: 'Oscar Andrews',
+        title: 'Founder'
+    },
+    {
+        img: MemberTwo,
+        name: 'Jamie Williams',
+        title: 'Co-Founder'
+    },
+    {
+        img: MemberThree,
+        name: 'Zoe Mitchell',
+        title: 'Marketing Manager'
+    },
+    {
+        img: MemberFour,
+        name: 'Bethany Brooks',
+        title: 'Operational Manager'
+    },
+    {
+        img: MemberFive,
+        name: 'Oscar Andrews',
+        title: 'Founder'
+    },
+    {
+        img: MemberSix,
+        name: 'Oscar Andrews',
+        title: 'Founder'
+    },
+    {
+        img: MemberSeven,
+        name: 'Oscar Andrews',
+        title: 'Founder'
+    },
+    {
+        img: MemberEight,
+        name: 'Oscar Andrews',
+        title: 'Founder'
+    },
+]
+
+export const teams_value = [
+    {
+        title: 'Collective Expertise',
+        description: `Porttitor interdum augue 
+        venenatis rhoncus himenaeos mattis magna 
+        nostra adipiscing nam elementum.`
+    },
+    {
+        title: 'Efficient Resource Utilization',
+        description: `Porttitor interdum augue 
+        venenatis rhoncus himenaeos mattis magna 
+        nostra adipiscing nam elementum.`
+    },
+    {
+        title: 'Collaborative Synergy',
+        description: `Porttitor interdum augue 
+        venenatis rhoncus himenaeos mattis magna 
+        nostra adipiscing nam elementum.`
+    },
+]
+
+export const aboutList = [
+    {
+        title: 'Solar Panel Solutions',
+        description: 'Torquent ante molestie donec scelerisque efficitur cursus quisque.'
+    },
+    {
+        title: 'Renewable Energy Consulting',
+        description: 'Torquent ante molestie donec scelerisque efficitur cursus quisque.'
+    },
+    {
+        title: 'Energy Efficiency Solutions',
+        description: 'Torquent ante molestie donec scelerisque efficitur cursus quisque.'
+    },
+]
+
+export const contactList = [
+    {
+        icon: SlLocationPin,
+        title: 'Head Office',
+        headingOne: 'Jalan Cempaka Wangi No 22',
+        headingTwo: 'Jakarta - Indonesia',
+    },
+    {
+        icon: MdOutlineEmail,
+        title: 'Email Support',
+        headingOne: 'support@yourdomain.tld',
+        headingTwo: 'hello@yourdomain.tld',
+    },
+    {
+        icon: FiPhone,
+        title: `Let's Talk`,
+        headingOne: 'Phone : +6221.2002.2012',
+        headingTwo: 'Fax : +6221.2002.2013',
+    },
+    
 ]
