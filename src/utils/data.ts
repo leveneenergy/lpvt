@@ -42,6 +42,10 @@ import { SlLocationPin } from "react-icons/sl";
 
 export const navlist = [
     {
+        name: 'Homepage',
+        path: '/'
+    },
+    {
         name: 'About Us',
         path: '/about'
     },
@@ -152,22 +156,22 @@ export const benefits = [
 export const qualifications = [
     {
         title: 'Green & Eco Tech',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'We Ensure that our services are eco-friendly and sustainable for the environment.',
         icon: MdOutlineEnergySavingsLeaf
     },
     {
         title: 'Expert Team Development',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'We have a team of experts who are dedicated to providing the best services to our clients.',
         icon: SlBadge
     },
     {
-        title: 'Green & Eco Tech',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        title: 'Quality Assurance',
+        description: 'We ensure that our services are of the highest quality and meet the needs of our clients.',
         icon: MdOutlineEnergySavingsLeaf
     },
     {
         title: '24/7 Support',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'We provide 24/7 support to our clients to ensure that they have the best experience with our services.',
         icon: SlSupport
     },
 ]
@@ -291,22 +295,22 @@ export const services = [
     {
         icon: LiaToolsSolid,
         title: 'Solar Panel Installation',
-        description: 'Per class in quis ac lorem primis nostra dui lobortis facilisi semper.'
+        description: 'We assist with the installation of solar panels for residential and commercial buildings.'
     },
     {
         icon: IoSettingsOutline,
         title: 'Solar Panel Maintenance',
-        description: 'Per class in quis ac lorem primis nostra dui lobortis facilisi semper.'
+        description: 'We provide maintenance services for solar panels to ensure they are in good condition.'
     },
     {
         icon: TiMessages,
         title: 'Consultations',
-        description: 'Per class in quis ac lorem primis nostra dui lobortis facilisi semper.'
+        description: 'We offer consultations to help you make informed decisions about solar panel installation.'
     },
     {
         icon: FaRegFileAlt,
         title: 'Solar Panel Installation',
-        description: 'Per class in quis ac lorem primis nostra dui lobortis facilisi semper.'
+        description: 'We assist with the installation of solar panels for residential and commercial buildings.'
     },
 ]
 
@@ -314,17 +318,17 @@ export const solutions = [
     {
         icon: IoDiamondOutline,
         title: 'Quality and Reliability',
-        description: 'Integer augue fames eget sollicitudin ullamcorper ultricies curae.'
+        description: 'Our services are of the highest quality and are reliable for our clients.'
     },
     {
         icon: IoSettingsOutline,
         title: 'Customized Solutions',
-        description: 'Integer augue fames eget sollicitudin ullamcorper ultricies curae.'
+        description: 'We provide customized solutions to meet the unique needs of our clients.'
     },
     {
         icon: GiBamboo,
         title: 'Environmental Impact',
-        description: 'Integer augue fames eget sollicitudin ullamcorper ultricies curae.'
+        description: 'We ensure that our services have a positive impact on the environment.'
     },
 ]
 
@@ -413,36 +417,30 @@ export const members = [
 export const teams_value = [
     {
         title: 'Collective Expertise',
-        description: `Porttitor interdum augue 
-        venenatis rhoncus himenaeos mattis magna 
-        nostra adipiscing nam elementum.`
+        description: 'We have a team of experts who are dedicated to providing the best services to our clients. Our team has years of experience in the renewable energy industry and is committed to helping our clients achieve their goals.'
     },
     {
         title: 'Efficient Resource Utilization',
-        description: `Porttitor interdum augue 
-        venenatis rhoncus himenaeos mattis magna 
-        nostra adipiscing nam elementum.`
+        description: 'We ensure that our resources are used efficiently to provide the best services to our clients. Our team is dedicated to providing the best services to our clients and is committed to helping them achieve their goals.'
     },
     {
         title: 'Collaborative Synergy',
-        description: `Porttitor interdum augue 
-        venenatis rhoncus himenaeos mattis magna 
-        nostra adipiscing nam elementum.`
+        description: 'We believe in the power of collaboration and work together to achieve our goals. Our team is committed to providing the best services to our clients and is dedicated to helping them achieve their goals.'
     },
 ]
 
 export const aboutList = [
     {
         title: 'Solar Panel Solutions',
-        description: 'Torquent ante molestie donec scelerisque efficitur cursus quisque.'
+        description: 'Our solar panel solutions are designed to meet the unique needs of our clients.'
     },
     {
         title: 'Renewable Energy Consulting',
-        description: 'Torquent ante molestie donec scelerisque efficitur cursus quisque.'
+        description: 'We provide consulting services to help you make informed decisions about renewable energy.'
     },
     {
         title: 'Energy Efficiency Solutions',
-        description: 'Torquent ante molestie donec scelerisque efficitur cursus quisque.'
+        description: 'Our energy efficiency solutions are designed to help you save money on your energy bills.'
     },
 ]
 
@@ -450,20 +448,20 @@ export const contactList = [
     {
         icon: SlLocationPin,
         title: 'Head Office',
-        headingOne: 'Jalan Cempaka Wangi No 22',
-        headingTwo: 'Jakarta - Indonesia',
+        headingOne: '19b Ilabere Ave, Ikoyi',
+        headingTwo: 'Lagos Nigeria',
     },
     {
         icon: MdOutlineEmail,
         title: 'Email Support',
-        headingOne: 'support@yourdomain.tld',
-        headingTwo: 'hello@yourdomain.tld',
+        headingOne: 'info@lpvtech.com',
+        headingTwo: 'support@lpvtech.com',
     },
     {
         icon: FiPhone,
         title: `Let's Talk`,
-        headingOne: 'Phone : +6221.2002.2012',
-        headingTwo: 'Fax : +6221.2002.2013',
+        headingOne: 'Phone : +2348495833349',
+        headingTwo: 'Alt : +2348394855581',
     },
 ]
 
