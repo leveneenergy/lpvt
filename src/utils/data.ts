@@ -20,7 +20,10 @@ import {
     MemberFour,
     MemberFive,
     MemberSix,
-    MemberSeven
+    MemberSeven,
+    ProjectThree,
+    SlideFive,
+    ProjectFour
 } from "@assets/images"
 import { LiaToolsSolid } from "react-icons/lia";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -54,7 +57,7 @@ export const navlist = [
         path: '/services',
         subMenu: [{
             name: 'Single Service',
-            path: '#'
+            path: '/service'
         }]
     },
     {
@@ -108,32 +111,32 @@ export const businessData = [
 export const servicesData = [
     {
         service: 'Solar Panel Installation',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'Professional setup of solar panels on residential, commercial, or industrial properties to harness solar energy for electricity.',
         icon: LiaToolsSolid
     },
     {
         service: 'Hybrid Back-up System',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'Integration of a backup power system combining solar energy with traditional power sources to ensure continuous electricity supply during outages.',
         icon: PiCarBatteryLight
     },
     {
         service: '30Kva Victron Solar Hybrid System',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'A robust 30-kilovolt-ampere (kVA) hybrid energy solution by Victron, combining solar power, batteries, and possibly other power sources for efficient energy management.',
         icon: MdOutlineEnergySavingsLeaf
     },
     {
         service: 'Project Development',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'Comprehensive planning and coordination of projects from initial concept through to completion, ensuring all phases are executed effectively.',
         icon: PiFolders
     },
     {
         service: 'Engineering, Procurement & Construction',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'End-to-end services covering the engineering design, procurement of materials and equipment, and the construction and commissioning of projects.',
         icon: PiBaseballHelmet
     },
     {
         service: 'Operation & Maintenance',
-        description: 'Venenatis quisque velit purus ex enim sagittis dictum iaculis maecenas est bibendum',
+        description: 'Ongoing services to ensure optimal performance and longevity of systems, including regular inspections, repairs, and updates as needed.',
         icon: IoSettingsOutline
     },
 ]
@@ -471,4 +474,49 @@ export const sliders = [
     'https://res.cloudinary.com/du52ca1q1/image/upload/v1721828968/medium-shot-engineers-discussing-about-solar-pannels_ot4q55.jpg',
     'https://res.cloudinary.com/du52ca1q1/image/upload/v1721831829/vecteezy_solar-energy-solar-photovoltaic-panels-for-renewable_33880873_rzovni.jpg',
     'https://res.cloudinary.com/du52ca1q1/image/upload/v1721831288/vecteezy_ai-generated-creating-sustainable-energy-using-solar-panels_37056492_zpttl5.jpg'
+]
+
+export const serviceDetails = [
+    {
+        header: 'Solar Panel Services',
+        content: 'We provide solar panel installation, maintenance, and consultation services to help you harness the power of the sun for your energy needs.',
+        img: ProjectThree
+    },
+    {
+        header: 'Solar Panel Services',
+        content: 'We provide solar panel installation, maintenance, and consultation services to help you harness the power of the sun for your energy needs.',
+        img: ProjectFour
+    },
+    {
+        header: 'Solar Panel Services',
+        content: 'We provide solar panel installation, maintenance, and consultation services to help you harness the power of the sun for your energy needs.',
+        img: SlideFive
+    }
+]
+
+export const serviceFeatures = [
+    {
+        feature: 'Integer mus per natoque'
+    },
+    {
+        feature: 'Integer mus per natoque'
+    },
+    {
+        feature: 'Duis hendrerit ipsum'
+    },
+    {
+        feature: 'Duis hendrerit ipsum'
+    },
+    {
+        feature: 'Vulputate pharetra taciti'
+    },
+    {
+        feature: 'Vulputate pharetra taciti'
+    },
+    {
+        feature: 'Auctor est eros'
+    },
+    {
+        feature: 'Auctor est eros'
+    }
 ]
