@@ -20,10 +20,7 @@ import {
     MemberFour,
     MemberFive,
     MemberSix,
-    MemberSeven,
-    ProjectThree,
-    SlideFive,
-    ProjectFour
+    MemberSeven
 } from "@assets/images"
 import { LiaToolsSolid } from "react-icons/lia";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -42,10 +39,16 @@ import { SlSupport } from "react-icons/sl";
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
+import type { CollectionEntry } from 'astro:content';
+import { sanityClient } from "sanity:client";
+import * as Queries from './queries'
+
+const servicesList: CollectionEntry<'services'>[] = await sanityClient.fetch(Queries.services)
+const projectsList: CollectionEntry<'projects'>[] = await sanityClient.fetch(Queries.projects)
 
 export const navlist = [
     {
-        name: 'Homepage',
+        name: 'Home',
         path: '/'
     },
     {
@@ -55,14 +58,22 @@ export const navlist = [
     {
         name: 'Services',
         path: '/services',
-        subMenu: [{
-            name: 'Single Service',
-            path: '/service'
-        }]
+        subMenu: servicesList.slice(0, 3).map(item => {
+            return {
+                name: item.title,
+                path: `/services/${item.slug}`
+            }
+        })
     },
     {
         name: 'Projects',
-        path: '/projects'
+        path: '/projects',
+        subMenu: projectsList.slice(0, 3).map(item => {
+            return {
+                name: item.name,
+                path: `/projects/${item.slug}`
+            }
+        })
     },
     {
         name: 'Contact Us',
@@ -88,7 +99,7 @@ export const navlist = [
     }
 ]
 
-export const subNav = ['Service', 'Project', 'Page']
+export const subNav = ['Services', 'Projects', 'Page']
 
 export const businessData = [
     {
@@ -296,24 +307,24 @@ export const clients = [
 
 export const services = [
     {
-        icon: LiaToolsSolid,
-        title: 'Solar Panel Installation',
-        description: 'We assist with the installation of solar panels for residential and commercial buildings.'
+        icon: IoSettingsOutline,
+        title: '100MW Solar Assembly Plant',
+        description: 'We boast a 100MW solar panel plant, 20,000 sqm, featuring a top-rated European assembly line.'
     },
     {
         icon: IoSettingsOutline,
-        title: 'Solar Panel Maintenance',
-        description: 'We provide maintenance services for solar panels to ensure they are in good condition.'
+        title: 'Customised Solar Solutions',
+        description: 'We customize solutions for each client with flexible PPA terms, tailored leases, and personalized service packages for optimal outcomes.'
     },
     {
-        icon: TiMessages,
-        title: 'Consultations',
-        description: 'We offer consultations to help you make informed decisions about solar panel installation.'
+        icon: IoSettingsOutline,
+        title: ' Solar Centre of Excellence',
+        description: 'We train workforces in solar deployment, fostering local expertise and innovation to meet Africa’s energy challenges.'
     },
     {
-        icon: FaRegFileAlt,
-        title: 'Solar Panel Installation',
-        description: 'We assist with the installation of solar panels for residential and commercial buildings.'
+        icon: IoSettingsOutline,
+        title: 'Professional Installation',
+        description: 'Our certified technicians ensure flawless solar PV installations with a focus on safety, precision, and efficiency.'
     },
 ]
 
@@ -451,8 +462,20 @@ export const contactList = [
     {
         icon: SlLocationPin,
         title: 'Head Office',
-        headingOne: '19b Ilabere Ave, Ikoyi',
+        headingOne: '19B, Ilabere Avenue, Off Oyinkan Abayomi Street, Ikoyi',
         headingTwo: 'Lagos Nigeria',
+    },
+    {
+        icon: SlLocationPin,
+        title: 'Abuja Office',
+        headingOne: '9, Thaba Tseka Street, Off Adetokunbo Ademola, Wuse 2',
+        headingTwo: 'FCT Nigeria',
+    },
+    {
+        icon: SlLocationPin,
+        title: 'Overseas',
+        headingOne: '5, Bolton Street, Green Park, London',
+        headingTwo: 'London United Kingdom',
     },
     {
         icon: MdOutlineEmail,
@@ -474,49 +497,4 @@ export const sliders = [
     'https://res.cloudinary.com/du52ca1q1/image/upload/v1721828968/medium-shot-engineers-discussing-about-solar-pannels_ot4q55.jpg',
     'https://res.cloudinary.com/du52ca1q1/image/upload/v1721831829/vecteezy_solar-energy-solar-photovoltaic-panels-for-renewable_33880873_rzovni.jpg',
     'https://res.cloudinary.com/du52ca1q1/image/upload/v1721831288/vecteezy_ai-generated-creating-sustainable-energy-using-solar-panels_37056492_zpttl5.jpg'
-]
-
-export const serviceDetails = [
-    {
-        header: 'Solar Panel Services',
-        content: 'We provide solar panel installation, maintenance, and consultation services to help you harness the power of the sun for your energy needs.',
-        img: ProjectThree
-    },
-    {
-        header: 'Solar Panel Services',
-        content: 'We provide solar panel installation, maintenance, and consultation services to help you harness the power of the sun for your energy needs.',
-        img: ProjectFour
-    },
-    {
-        header: 'Solar Panel Services',
-        content: 'We provide solar panel installation, maintenance, and consultation services to help you harness the power of the sun for your energy needs.',
-        img: SlideFive
-    }
-]
-
-export const serviceFeatures = [
-    {
-        feature: 'Integer mus per natoque'
-    },
-    {
-        feature: 'Integer mus per natoque'
-    },
-    {
-        feature: 'Duis hendrerit ipsum'
-    },
-    {
-        feature: 'Duis hendrerit ipsum'
-    },
-    {
-        feature: 'Vulputate pharetra taciti'
-    },
-    {
-        feature: 'Vulputate pharetra taciti'
-    },
-    {
-        feature: 'Auctor est eros'
-    },
-    {
-        feature: 'Auctor est eros'
-    }
 ]
