@@ -12,10 +12,11 @@ const { navlist, subNav } = Data
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [openMenu, setOpenMenu] = useState(null)
+
     function handleToggle(type: string, name?: any){
         type === 'menu' ? setIsOpen(!isOpen) : setOpenMenu(openMenu === name ? null : name)
     }
-      
+
   return (
         <nav className="_nav">
             <div className="_container">
@@ -27,13 +28,15 @@ const Navbar = () => {
                         <ul className="_nav_list">
                             {navlist.map((item) => (
                                 <div key={item?.name} onClick={() => handleToggle('subMenu', item?.name)}>
-                                    <li className={item?.path === '/' ? '_nav_list_item active' : ' _nav_list_item desktop'}>
+                                    {/* <li className={item.path === window.location.pathname ? '_nav_list_item_active' : '_nav_list_item'}> */}
+                                    <li className={'_nav_list_item'}>
                                     <a href={item.path}>{item.name}</a>
                                     {
                                         item.subMenu && (
                                         <ul className="_dropdown_list">
                                             {item.subMenu.map((link) => (
-                                                <li key={link?.name} className='_dropdown_list_item'><a href={link.path}>{link.name}</a></li>
+                                                // <li key={link?.name} className={link.path === window.location.pathname ? '_dropdown_list_item_active' : '_dropdown_list_item'}><a href={link.path}>{link.name}</a></li>
+                                                <li key={link?.name} className={'_dropdown_list_item'}><a href={link.path}>{link.name}</a></li>
                                             ))}
                                         </ul>
                                         )
@@ -60,7 +63,8 @@ const Navbar = () => {
                             {navlist.map((item) => (
                                     <div key={item?.name} className='inline-flex' onClick={() => handleToggle('subMenu', item?.name)}>
                                         <motion.li 
-                                        className={item?.path === '/' ? '_nav_list_item_mobile active' : '_nav_list_item_mobile'}
+                                        // className={item?.path === window.location.pathname ? '_nav_list_item_mobile_active' : '_nav_list_item_mobile'}
+                                        className={'_nav_list_item_mobile'}
                                         >
                                         <motion.a href={item.path}>{item.name}</motion.a>
                                         {
@@ -78,11 +82,11 @@ const Navbar = () => {
                                             </motion.ul>
                                             )
                                         }
+                                        {subNav.includes(item.name) && <span className='icon_mobile'><MdKeyboardArrowDown size={'20px'} className='mt-[2px]' /></span>}
                                         </motion.li>
-                                        {subNav.includes(item.name) && <span className='icon_mobile'><MdKeyboardArrowDown size={'20px'} /></span>}
                                     </div>
                                 ))}
-                                <div className='_nav_btn'>Get a Quote</div>
+                                {/* <div className='_nav_btn'>Get a Quote</div> */}
                             </motion.ul>
                         }
                     </div>
