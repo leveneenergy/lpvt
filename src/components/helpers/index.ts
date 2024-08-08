@@ -1,6 +1,6 @@
 import Carousel from "./carousel";
 import Counter from "./counter";
-import Sliders from "./sliders"
+import Sliders from "./sliders";
 
 export {
     Carousel,
