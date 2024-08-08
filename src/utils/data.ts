@@ -24,8 +24,6 @@ import {
 } from "@assets/images"
 import { LiaToolsSolid } from "react-icons/lia";
 import { IoSettingsOutline } from "react-icons/io5";
-import { TiMessages } from "react-icons/ti";
-import { FaRegFileAlt } from "react-icons/fa";
 import { IoDiamondOutline } from "react-icons/io5";
 import { GoSun } from "react-icons/go";
 import { CiLocationArrow1 } from "react-icons/ci";
@@ -81,7 +79,7 @@ export const navlist = [
     },
     {
         name: 'Page',
-        path: '/page',
+        path: '#',
         subMenu: [
             {
                 name: 'Team',
