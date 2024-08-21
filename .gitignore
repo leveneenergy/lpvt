@@ -140,3 +140,5 @@ dist
 
 # jetbrains setting folder
 .idea/
+
+.netlify
