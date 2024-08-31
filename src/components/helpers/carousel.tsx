@@ -3,9 +3,9 @@ import 'swiper/swiper-bundle.css';
 import SwiperCore from 'swiper';
 import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Button } from '../common';
-import { Data } from '@utils/index'
-import "@styles/styles.css";
+import { CarouselSlideOne, CarouselSlideTwo, CarouselSlideThree, CarouselSlideFour, CarouselSlideFive } from '@assets/images';
 
+const sliders = [CarouselSlideOne, CarouselSlideTwo, CarouselSlideThree, CarouselSlideFour, CarouselSlideFive]
 SwiperCore.use([EffectFade, Autoplay, Navigation, Pagination ]);
 const carousel = () => {
   return (
@@ -16,9 +16,9 @@ const carousel = () => {
         delay: 2500,
         disableOnInteraction: false
       }}
-      className="mySwiper"
+      style={{ zIndex: 1 }}
     >
-      {Data.sliders.map((item, i) => (
+      {sliders.map((item, i) => (
         <SwiperSlide key={i}>
             <section 
               className='w-full pt-40 min-h-[150vh] smm:pt-52 sm:min-h-[100vh] bg-no-repeat bg-cover bg-center md:min-h-[80vh] lg:min-h-[110vh] md:pt-44' 
