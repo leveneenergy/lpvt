@@ -356,13 +356,13 @@ export const contactList = [
     {
         icon: MdOutlineEmail,
         title: 'Email',
-        headingOne: 'info@lpvtechnolgies.com'
+        headingOne: 'hello@lpvtechnolgies.com'
     },
     {
         icon: FiPhone,
         title: 'Telephone',
-        headingOne: '09062892870',
-        headingTwo: '09062948514',
+        headingOne: '+2347074913776',
+        headingTwo: '+2347074913775',
     },
 ]
 
