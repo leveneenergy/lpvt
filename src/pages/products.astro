@@ -1,0 +1,18 @@
+---
+import { Common } from '@components/index';
+import Layout from '@components/layout.astro';
+import { PRODUCTS_PAGE_DESCRIPTION } from '@utils/constants'
+---
+
+<Layout title='Products' description={PRODUCTS_PAGE_DESCRIPTION}>
+    <Common.Hero backgroundImage={'/images/blog_bg.jpg'} header='Our Products' caption='Cleaner Energies for a Cleaner World.' />
+
+    <!-- What we offer section -->
+	<Common.Offer />
+
+    <!-- Live Green Section -->
+	<Common.GreenCounter page='products' />
+
+    <!-- Why choose us -->
+	<Common.Solutions />
+</Layout>

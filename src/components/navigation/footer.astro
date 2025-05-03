@@ -9,9 +9,9 @@ import { MdOutlineEmail, MdOutlineLocationOn } from "react-icons/md";
 import type { CollectionEntry } from "astro:content";
 import { sanityClient } from "sanity:client";
 
-const servicesList: CollectionEntry<'services'>[] = await sanityClient.fetch(Queries.services)
+const productsList: CollectionEntry<'products'>[] = await sanityClient.fetch(Queries.products)
 const projectsList: CollectionEntry<'projects'>[] = await sanityClient.fetch(Queries.projects)
-const footerCompany = servicesList.length > 0 && projectsList.length > 0 ? [
+const footerCompany = productsList.length > 0 && projectsList.length > 0 ? [
     {
         link: 'About Us',
         path: '/about'
@@ -21,14 +21,14 @@ const footerCompany = servicesList.length > 0 && projectsList.length > 0 ? [
         path: '/blog'
     },
     {
-        link: 'Services',
-        path: '/services'
+        link: 'Products',
+        path: '/products'
     },
     {
         link: 'Projects',
         path: '/projects'
     }
-] : servicesList.length > 0 && projectsList.length === 0 ? [
+] : productsList.length > 0 && projectsList.length === 0 ? [
     {
         link: 'About Us',
         path: '/about'
@@ -38,10 +38,10 @@ const footerCompany = servicesList.length > 0 && projectsList.length > 0 ? [
         path: '/blog'
     },
     {
-        link: 'Services',
-        path: '/services'
+        link: 'Products',
+        path: '/products'
     }
-] : servicesList.length === 0 && projectsList.length > 0 ? [
+] : productsList.length === 0 && projectsList.length > 0 ? [
     {
         link: 'About Us',
         path: '/about'

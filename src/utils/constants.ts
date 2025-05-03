@@ -37,3 +37,6 @@ Stay updated with the latest insights, news, and trends in the energy industry.
 Read LPV Technologies' blog for expert articles and resources. A Web Raiders Studio Production
 `
 
+export const PRODUCTS_PAGE_DESCRIPTION = `
+Explore the range of energy solutions offered by LPV Technologies. 
+From renewable energy systems to energy efficiency consulting, we power your future. A Web Raiders Studio Production`

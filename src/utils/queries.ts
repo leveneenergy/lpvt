@@ -4,6 +4,8 @@ export const articles = '*[_type == "article"] | order(date desc){"slug": slug.c
 export const projects = '*[_type == "projects"] | order(_createdAt desc){"slug": slug.current, "image": background_image.url, name, description}'
 // Get all articles
 export const services = '*[_type == "services"] | order(_createdAt desc){"slug": slug.current, title, description, image}'
+// Get all products
+export const products = '*[_type == "products"] | order(_createdAt desc){"slug": slug.current, title, description, image}'
 // Get all terms
 export const terms = '*[_type == "terms"]{ title, content, _createdAt } | order(_createdAt asc)'
 // Get all faqs
@@ -23,6 +25,9 @@ export const projectSlugs = '*[_type == "projects"]{"params": {"slug": slug.curr
 
 // Get array of service slugs
 export const serviceSlugs = '*[_type == "services"]{"params": {"slug": slug.current}}'
+
+// Get array of product slugs
+export const productSlugs = '*[_type == "products"]{"params": {"slug": slug.current}}'
 
 // Fetch the each blog post from sanity by slug
 export const postDetails = `*[_type == "article" && slug.current == $slug][0]{
@@ -52,8 +57,19 @@ description,
 export const serviceDetails = `*[_type == "services" && slug.current == $slug][0]{
 title,
 "slug": slug.current,
- description,
+description,
 image,
 features,
 sub_services
+}`
+
+// Fetch the each product from sanity by slug
+export const productDetails = `*[_type == "products" && slug.current == $slug][0]{
+title,
+"slug": slug.current,
+description,
+image,
+feature_title,
+features,
+sub_products
 }`

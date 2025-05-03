@@ -9,7 +9,7 @@ import { Logo } from "@assets/images";
 
 const { subNav } = Data
 
-const Navbar = ({ serviceList, projectList }: any) => {
+const Navbar = ({ serviceList, projectList, productList }: any) => {
     const [isOpen, setIsOpen] = useState(false)
     const [openMenu, setOpenMenu] = useState(null)
     const [showNavbar, setShowNavbar] = useState(true)
@@ -41,7 +41,7 @@ const Navbar = ({ serviceList, projectList }: any) => {
         };
 
     }, [lastScrollY])
-    const navlist = serviceList.length > 0 && projectList.length > 0 ? [
+    const navlist = productList.length > 0 && projectList.length > 0 ? [
         {
             name: 'Home',
             path: '/'
@@ -51,12 +51,12 @@ const Navbar = ({ serviceList, projectList }: any) => {
             path: '/about'
         },
         {
-            name: 'Services',
-            path: '/services',
-            subMenu: serviceList.slice(0, 5).map((item: any) => {
+            name: 'Prooducts',
+            path: '/products',
+            subMenu: productList.slice(0, 5).map((item: any) => {
                 return {
                     name: item.title,
-                    path: `/services/${item.slug}`
+                    path: `/products/${item.slug}`
                 }
             })
         },
@@ -92,7 +92,7 @@ const Navbar = ({ serviceList, projectList }: any) => {
                 }
             ]
         }
-    ] : serviceList.length > 0 && projectList.length === 0 ? [
+    ] : productList.length > 0 && projectList.length === 0 ? [
         {
             name: 'Home',
             path: '/'
@@ -102,12 +102,12 @@ const Navbar = ({ serviceList, projectList }: any) => {
             path: '/about'
         },
         {
-            name: 'Services',
-            path: '/services',
-            subMenu: serviceList.slice(0, 5).map((item: any) => {
+            name: 'Products',
+            path: '/products',
+            subMenu: productList.slice(0, 5).map((item: any) => {
                 return {
                     name: item.title,
-                    path: `/services/${item.slug}`
+                    path: `/products/${item.slug}`
                 }
             })
         },
@@ -133,7 +133,7 @@ const Navbar = ({ serviceList, projectList }: any) => {
                 }
             ]
         }
-    ] : serviceList.length === 0 && projectList.length > 0 ? [
+    ] : productList.length === 0 && projectList.length > 0 ? [
         {
             name: 'Home',
             path: '/'
