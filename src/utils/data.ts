@@ -35,6 +35,7 @@ import { SlSupport } from "react-icons/sl";
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
+import { GrServices } from "react-icons/gr";
 
 export const subNav = ['Services', 'Projects', 'More']
 
@@ -218,41 +219,59 @@ export const clients = [
 export const services = [
     {
         icon: IoSettingsOutline,
-        title: 'Manufacturing Plant',
-        description: 'LPV Technologies operates a state-of-the-art 100MW solar panel manufacturing plant.'
+        title: 'Built to Scale',
+        description: '200MW capacity with 100MW active production, driving local energy independence'
     },
     {
         icon: IoSettingsOutline,
-        title: 'Flexible and Customised Solar Solutions',
-        description: 'LPV Technologies offers tailored solutions to meet the unique needs of each solar project.'
+        title: 'Smart & Semi-Automated',
+        description: 'Equipped with a European automated solar manufacturing  line for precision and speed.'
     },
     {
         icon: IoSettingsOutline,
-        title: 'Solar Centre of Excellence',
-        description: 'We provide specialized training in solar project deployments, supported by ongoing research and development to advance solar technologies.'
+        title: 'Homegrown Expertise',
+        description: 'Our trained Nigerian team ensures top-quality production and testing every step of the way.'
     },
     {
         icon: IoSettingsOutline,
-        title: 'Professional Installation',
-        description: 'Our certified installation technicians are dedicated to delivering flawless execution on every project, with a focus on safety, precision, and efficiency.'
+        title: 'More Than a Plant',
+        description: 'With a showroom, service center, and solar training hub, we’re a full-fledged solar innovation center.'
+    },
+]
+
+export const offer = [
+    {
+        icon: GrServices,
+        title: 'Higher Efficiency Solar Panels',
+        description: 'Our Grade A panels convert more sunlight into electricity—perfect for tight spaces and demanding energy needs. More power, less space, better returns'
+    },
+    {
+        icon: GrServices,
+        title: 'Built to Last',
+        description: 'With a lifespan of 25+ years, our panels are a solid long-term investment. Durable, dependable, and designed to withstand Africa’s toughest weather conditions.'
+    },
+    {
+        icon: GrServices,
+        title: 'Green Impact',
+        description: 'Our high-efficiency panels reduce carbon emissions over their lifetime—delivering more clean energy while minimizing environmental impact.'
     },
 ]
 
 export const solutions = [
     {
         icon: IoDiamondOutline,
-        title: 'Quality and Reliability',
-        description: 'Our services are of the highest quality and are reliable for our clients.'
+        title: 'Built for Africa, Backed by Technology',
+        description: 'Our panels are crafted to withstand tough conditions and deliver premium performance.'
     },
     {
         icon: IoSettingsOutline,
-        title: 'Customized Solutions',
-        description: 'We provide customized solutions to meet the unique needs of our clients.'
+        title: 'Locally Manufactured, Powered by Excellence',
+        description: 'Assembled locally in our 100MW facility with top European tech, ensuring world-class quality and precision.'
     },
     {
         icon: GiBamboo,
-        title: 'Environmental Impact',
-        description: 'We ensure that our services have a positive impact on the environment.'
+        title: 'We offer Power and Peace of Mind',
+        description: 'High uptime, reliable support, and flexible payment models tailored to your needs.'
     },
 ]
 
