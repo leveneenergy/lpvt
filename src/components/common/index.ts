@@ -19,6 +19,8 @@ import Policy from "./policy";
 import Clients from './clients.astro';
 import Form from "./form";
 import Cookies from "./cookies";
+import Products from "./products.astro";
+import ProductList from "./product_list.astro";
 
 export {
     Button,
@@ -41,5 +43,7 @@ export {
     ServiceList,
     Policy,
     Clients,
-    Cookies
+    Cookies,
+    Products,
+    ProductList
 }
