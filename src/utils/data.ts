@@ -254,12 +254,12 @@ export const sub_services = [
     }
 ]
 
-export const service_description = 'Backed by Levene Energy Holdings, LPVT operates a cutting-edge 100MW smart semi-automated solar panel manufacturing line in a 20,000 sqm Lagos facility. The plant integrates top-tier European equipment, advanced lamination techniques, and high-precision cell interconnection technology to ensure superior performance and seamless delivery for solar panels for large-scale projects.'
+export const service_description = 'Backed by Levene Energy Holdings, LPVT operates a cutting-edge 100MW smart semi-automated solar panel manufacturing line in a 20,000 sqm Lagos facility. The plant integrates top-tier European equipment, advanced lamination techniques, and high-precision cell interconnection technology to ensure superior performance and seamless delivery of solar panels for large-scale projects.'
 
 export const service_features = [
     'Precisely engineered to meet global benchmarks and standards for Grade A solar panels.',
-    'Built with PERC and monocrystalline solar panel technologies, delivering up to 21.30% efficiency.',
-    'Eliminate import lead times and reduce solar logistics cost for faster solar project execution.'
+    'Built with PERC and monocrystalline solar panel technologies, delivering up to 23.20% efficiency.',
+    'Eliminate import lead times and reduce solar logistics costs for faster solar project execution.'
 ]
 
 export const offer = [
