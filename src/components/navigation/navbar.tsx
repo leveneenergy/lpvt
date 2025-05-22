@@ -51,6 +51,10 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/about'
         },
         {
+            name: 'Services',
+            path: '/services'
+        },
+        {
             name: 'Prooducts',
             path: '/products',
             subMenu: productList.slice(0, 5).map((item: any) => {
@@ -102,6 +106,10 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/about'
         },
         {
+            name: 'Services',
+            path: '/services'
+        },
+        {
             name: 'Products',
             path: '/products',
             subMenu: productList.slice(0, 5).map((item: any) => {
@@ -143,6 +151,10 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/about'
         },
         {
+            name: 'Services',
+            path: '/services'
+        },
+        {
             name: 'Projects',
             path: '/projects',
             subMenu: projectList.slice(0, 5).map((item: any) => {
@@ -182,6 +194,10 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
         {
             name: 'About Us',
             path: '/about'
+        },
+        {
+            name: 'Services',
+            path: '/services'
         },
         {
             name: 'Contact Us',
@@ -230,7 +246,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
                                         )
                                     }
                                     </li>
-                                    {subNav.includes(item.name) && <span><MdKeyboardArrowDown style={{ color:'#12263A', paddingTop: '2px'}} size={'20px'}  /></span>}
+                                    {/* {subNav.includes(item.name) && <span><MdKeyboardArrowDown style={{ color:'#12263A', paddingTop: '2px'}} size={'20px'}  /></span>} */}
                                 </div>
                             ))}
                             {/* <div className='_nav_btn'>Get a Quote</div> */}
@@ -269,7 +285,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
                                             </motion.ul>
                                             )
                                         }
-                                        {subNav.includes(item.name) && <span className='icon_mobile'><MdKeyboardArrowDown size={'20px'} color='#12263A' className='mt-[2px]' /></span>}
+                                        {/* {subNav.includes(item.name) && <span className='icon_mobile'><MdKeyboardArrowDown size={'20px'} color='#12263A' className='mt-[2px]' /></span>} */}
                                         </motion.li>
                                     </div>
                                 ))}

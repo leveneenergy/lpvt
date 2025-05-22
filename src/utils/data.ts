@@ -239,6 +239,29 @@ export const services = [
     },
 ]
 
+export const sub_services = [
+    {
+        title: 'Risks & Costs of Imports',
+        description: 'Reduce your dependence on imported solar panel supply and eliminate excessive shipping costs, maritime delays, and cargo damages for solar panel installation services in Nigeria.'
+    },
+    {
+        title: 'Critical After-Sales Support.',
+        description: 'Avoid the expensive process of requesting overseas manufacturer support or returning defective solar panels. Our solar panel after sales support in Nigeria ensures fast, accessible, and transparent assistance.'
+    },
+    {
+        title: 'Forex & Supply Volatility.',
+        description: 'Reduce exposure to unstable exchange rates and unpredictable supply disruptions by choosing Naira payment solar panels with guaranteed availability and local support.'
+    }
+]
+
+export const service_description = 'Backed by Levene Energy Holdings, LPVT operates a cutting-edge 100MW smart semi-automated solar panel manufacturing line in a 20,000 sqm Lagos facility. The plant integrates top-tier European equipment, advanced lamination techniques, and high-precision cell interconnection technology to ensure superior performance and seamless delivery for solar panels for large-scale projects.'
+
+export const service_features = [
+    'Precisely engineered to meet global benchmarks and standards for Grade A solar panels.',
+    'Built with PERC and monocrystalline solar panel technologies, delivering up to 21.30% efficiency.',
+    'Eliminate import lead times and reduce solar logistics cost for faster solar project execution.'
+]
+
 export const offer = [
     {
         icon: GrServices,
@@ -272,6 +295,24 @@ export const solutions = [
         icon: GiBamboo,
         title: 'We offer Power and Peace of Mind',
         description: 'High uptime, reliable support, and flexible payment models tailored to your needs.'
+    },
+]
+
+export const solutions_services = [
+    {
+        icon: IoDiamondOutline,
+        title: 'Solar & Mini-grid Developers',
+        description: 'Our certified solar panels in Nigeria meet international standards and are ideal for industrial solar energy systems and mini-grid solar panels.'
+    },
+    {
+        icon: IoSettingsOutline,
+        title: 'Solar Installers and Dealers',
+        description: 'We provide high-efficiency solar panels in Nigeria with competitive pricing and fast delivery for professional solar installers in Nigeria.'
+    },
+    {
+        icon: GiBamboo,
+        title: 'Solar Distributors',
+        description: 'Our bulk solar panel purchase in Nigeria can streamline your operations and reduce logistics complexity while improving profitability.    '
     },
 ]
 
