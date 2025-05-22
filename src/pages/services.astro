@@ -7,6 +7,7 @@ import type { CollectionEntry } from "astro:content";
 import { sanityClient } from "sanity:client";
 import { PortableText } from "astro-portabletext";
 import { SERVICES_PAGE_DESCRIPTION } from '@utils/constants'
+import { Button } from "@components/common";
 export const prerender = true;
 
 
@@ -19,6 +20,10 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
 <Layout title='Services' description={SERVICES_PAGE_DESCRIPTION}>
     <Common.Hero backgroundImage={'/images/blog_bg.jpg'} header='Our Services' caption='Explore High-Performance Solar Panels.' />
 
+    <!-- Get a quote-->
+<div class="w-full flex justify-center mt-10">
+        <Button path="/form" className="py-3 px-24 font-bold text-white bg-green rounded-full baseline hover:bg-darkBlue" text="Get a Quote" />
+    </div>
     <!-- Service List -->
     <section class="w-full border-b border-b-gray-300 pb-10 md:pb-20">
         <Common.Container>
