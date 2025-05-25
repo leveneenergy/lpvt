@@ -17,7 +17,7 @@ export default defineConfig({
     projectId,
     dataset,
     // Set useCdn to false if you're building statically.
-    useCdn: true,
+    useCdn: false,
     studioBasePath: studioUrl
   }),
   partytown({
