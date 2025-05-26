@@ -421,9 +421,9 @@ export const contactList = [
     {
         icon: FiPhone,
         title: 'Telephone',
-        headingOne:'+2349062014600',
+        // headingOne:'+2349062014600',
        // headingTwo: '+2347074913775',
-        headingThree: '+2349062014600',
+        headingThree: 'https://wa.me/2347074913776?text=Hello',
     },
 ]
 
