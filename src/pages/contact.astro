@@ -3,6 +3,7 @@ import { SocialIcons } from '@components/common';
 import { Common } from '@components/index';
 import Layout from '@components/layout.astro';
 import { Data } from '@utils/index';
+import { FaWhatsapp } from "react-icons/fa";
 import { CONTACT_PAGE_DESCRIPTION } from '@utils/constants'
 ---
 
@@ -91,15 +92,21 @@ import { CONTACT_PAGE_DESCRIPTION } from '@utils/constants'
                                                     <p class="text-base text-gray-400 mt-1 md:pr-20">
                                                         {item.headingTwo}
                                                     </p>
-                                                    <p class="text-base text-gray-400 mt-1 md:pr-20">
-                                                                                                                   
-                                                                                                                     
-                                                            {item.headingThree && (
-                                                            <a href= {item.headingThree} target="_blank" rel="noopener noreferrer">
-                                                                +2349062014600
-                                                            </a>
-                                                            )}
-                                                    </p>
+
+                                                    
+                                                 <p class="text-base text-gray-400 mt-1 md:pr-20">
+                                                {item.headingThree && (
+                                                    <a 
+                                                        href={item.headingThree} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        class="underline flex items-center gap-2 text-[#25D366] hover:text-[#128C7E]"
+                                                    >
+                                                        <FaWhatsapp size={18} />
+                                                        +2349062014600
+                                                    </a>
+                                                )}  
+                                                </p>
                                                 </div>
                                             </div>
                                         </div>
