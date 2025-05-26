@@ -41,11 +41,11 @@ import BlogTwo from "./blog_two.jpg?url"
 import BlogFour from "./blog_four.jpg?url"
 import PrivacyImg from "./privacy.jpg?url"
 import PolicyImage from "./policy.jpg"
-import CarouselSlideOne from './solar-panel-park-field.jpg?url'
-import CarouselSlideTwo from './construction-worker-wearing-hardhat.jpg?url'
-import CarouselSlideThree from './engineers-discussing-about-solar.jpg?url'
-import CarouselSlideFour from './solar-energy-photovoltaic-panels.jpg?url'
-import CarouselSlideFive from './creating-sustainable-energy-using-solar.jpg?url'
+import CarouselSlideOne from 'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748250835/Home_Page_-_Hero_Image_6_jprzhx.jpg?url'
+import CarouselSlideTwo from 'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748250836/Home_Page_-_Hero_Image_3_whhjcj.jpg?url'
+import CarouselSlideThree from 'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748250843/Home_Page_-_Hero_Image_1a_uj3whz.jpg?url'
+import CarouselSlideFour from 'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748250836/Home_Page_-_Hero_Image_4_vio6oe.jpg?url'
+import CarouselSlideFive from 'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748250843/Home_Page_-_Hero_Image_1a_uj3whz.jpg?url'
 
 export {
     SlideOne,
