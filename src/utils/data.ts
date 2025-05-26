@@ -423,6 +423,7 @@ export const contactList = [
         title: 'Telephone',
         headingOne:'+2349062014600',
        // headingTwo: '+2347074913775',
+        headingThree: '+2349062014600',
     },
 ]
 
