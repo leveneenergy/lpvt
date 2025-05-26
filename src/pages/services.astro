@@ -7,6 +7,7 @@ import type { CollectionEntry } from "astro:content";
 import { sanityClient } from "sanity:client";
 import { PortableText } from "astro-portabletext";
 import { SERVICES_PAGE_DESCRIPTION } from '@utils/constants'
+import { Button } from "@components/common";
 export const prerender = true;
 
 
@@ -17,8 +18,12 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
 ---
 
 <Layout title='Services' description={SERVICES_PAGE_DESCRIPTION}>
-    <Common.Hero backgroundImage={'/images/blog_bg.jpg'} header='Our Services' caption='Explore High-Performance Solar Panels.' />
+    <Common.Hero backgroundImage={'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748203425/Service_Page_-_Cover_Image_z5zasp.jpg'} header='Our Services' caption='Explore High-Performance Solar Panels.' />
 
+    <!-- Get a quote-->
+<div class="w-full flex justify-center mt-10">
+        <Button path="/form" className="py-3 px-24 font-bold text-white bg-green rounded-full baseline hover:bg-darkBlue" text="Get a Quote" />
+    </div>
     <!-- Service List -->
     <section class="w-full border-b border-b-gray-300 pb-10 md:pb-20">
         <Common.Container>
@@ -38,7 +43,7 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
         <Common.Container>
             <div class="flex flex-col lg:flex-row w-full gap-y-5 lg:gap-x-20">
                 <div class="w-full lg:w-[45%]" data-aos='fade-right' data-aos-offset='100'>
-                    <img src={'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1745921600/LPVT_69_sri9ad.jpg'} alt="slide_five" class={'w-full h-[auto] lg:h-[300px] rounded-xl'} />
+                    <img src={'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748203422/Service_Page_-_Second_Image_er8qai.jpg'} alt="slide_five" class={'w-full h-[auto] lg:h-[300px] rounded-xl'} />
                 </div>
                 <div class="w-full lg:w-[55%]" data-aos='fade-up' data-aos-offset='100'>
                     <div>
@@ -73,17 +78,19 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
 	<Common.SolutionsServices />
 
     <!-- FAQs -->
-    <section class="w-full min-h-[100vh] md:min-h-[60vh] py-10 xxl:py-40 xxl:min-h-[100vh]">
+    <!-- <section class="w-full min-h-[100vh] md:min-h-[60vh] py-10 xxl:py-40 xxl:min-h-[100vh]">
         <Common.Container flex='flex-col'>
             <div class="flex-col flex-wrap text-center" data-aos='fade-up' data-aos-offset='100'>
                 <h6 class="uppercase text-green font-bold">Common Questions</h6>
                 <h2 class="text-[24px] md:text-[38px] text-darkBlue font-bold mt-2 leading-[45px]">Most Popular Questions</h2>
-            </div>
+            </div> -->
             <!-- FAQs -->
-            <Common.Faqs data={faqsInPage} client:load />
+            <!-- <Common.Faqs data={faqsInPage} client:load />
             <div class="w-full mt-5">
                 <Common.Pagination path={'faq'} currentPage={currentPage} totalPages={totalPages} disablePrevious={currentPage === 1} disableNext={currentPage === totalPages} />
             </div>
         </Common.Container>
-    </section>
+    </section> -->
+
+
 </Layout>
