@@ -6,6 +6,7 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 import type { CollectionEntry } from "astro:content";
 import { sanityClient } from "sanity:client";
 import { PortableText } from "astro-portabletext";
+import { Button } from '@components/common';
 import { PRODUCTS_PAGE_DESCRIPTION } from '@utils/constants'
 export const prerender = true;
 
@@ -89,6 +90,14 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
             </div>
         </Common.Container>
     </section>
+
+    <div class="w-full flex justify-center mt-10">
+        <Button 
+             path="https://drive.google.com/file/d/1VXXz0T5VkqRHi7P1fTR_uOcPzQkgZpbi/view?usp=sharing" 
+            className="py-3 px-24 font-bold text-white bg-green rounded-full baseline hover:bg-darkBlue" 
+            text="Datasheet" 
+        />
+    </div>
 
     <!-- Live Green Section -->
 	<Common.GreenCounter page="products" />
