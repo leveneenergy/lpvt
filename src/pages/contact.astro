@@ -86,7 +86,11 @@ import { CONTACT_PAGE_DESCRIPTION } from '@utils/constants'
                                                 <h3 class="text-[18px] font-bold text-white">{item.title}</h3>
                                                 <div class="flex-col">
                                                     <p class="text-base text-gray-400 mt-1 md:pr-20">
-                                                        {item.headingOne}
+                                                        {item.headingOne && (
+                                                            <a href={item.headingTwo} target="_blank" rel="noopener noreferrer">
+                                                                +2347074913776
+                                                            </a>
+                                                            )}
                                                     </p>
                                                     <p class="text-base text-gray-400 mt-1 md:pr-20">
                                                         {item.headingTwo}
