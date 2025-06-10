@@ -8,6 +8,7 @@ import { sanityClient } from "sanity:client";
 import { PortableText } from "astro-portabletext";
 import { Button } from '@components/common';
 import { PRODUCTS_PAGE_DESCRIPTION } from '@utils/constants'
+import WhatsAppWidget from "@components/common/Chatbox.tsx";
 export const prerender = true;
 
 export async function getStaticPaths(){
@@ -31,6 +32,8 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
     <!-- Hero Section -->
     <section class="min-h-[60vh] xxl:min-h-[100vh] pt-24 md:pt-32 w-full bg-no-repeat bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `linear-gradient(rgba(0, 23, 23, 0.6), rgba(0, 23, 23, 0.6)), url(${product.image.url})`}}>
         <div class="w-[600px] text-center flex flex-col justify-center items-center">
+
+            <WhatsAppWidget client:load />
             <!-- Top Icon -->
             <div class="w-[max-content] p-5 rounded-full" style={{ backgroundImage: 'radial-gradient(at top left, #DDEDC1 0%, #0FCC7C 100%)'}}>
                 <GrServices color="#fff" size={'36px'} />

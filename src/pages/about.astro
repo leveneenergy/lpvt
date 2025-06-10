@@ -2,12 +2,14 @@
 import { Layout, Common } from "@components/index"
 import { Data } from "@utils/index";
 import { ABOUT_PAGE_DESCRIPTION } from '@utils/constants'
+import WhatsAppWidget from "@components/common/Chatbox.tsx";
 ---
 
 <Layout title='About Us' description={ABOUT_PAGE_DESCRIPTION}>
     <!-- Hero Section -->
 	<Common.Hero backgroundImage={'/images/solar-photovoltaic-panels-station.jpg'} header='About Us' caption='Renewable Energy for a Sustainable World' />
-    <!-- About Section -->
+   <WhatsAppWidget client:load />
+	<!-- About Section -->
     <section class="w-full pt-20 lg:pt-40 pb-[40px]">
 		<Common.Container>
 			<div class="flex flex-col md:flex-row md:gap-5">

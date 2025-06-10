@@ -5,12 +5,14 @@ import Layout from '@components/layout.astro';
 import { Data } from '@utils/index';
 import { FaWhatsapp } from "react-icons/fa";
 import { CONTACT_PAGE_DESCRIPTION } from '@utils/constants'
+import WhatsAppWidget from "@components/common/Chatbox.tsx";
 ---
 
 <Layout title='Contact Us' description={CONTACT_PAGE_DESCRIPTION}>
     <!-- Hero Section -->
     <Common.Hero backgroundImage={'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748204169/Contact_Page_-_Cover_Image_xzqhgu.jpg'} header='Contact us' />
 
+    <WhatsAppWidget client:load />
     <!-- Feedback Section -->
     <section class="w-full min-h-screen md:min-h-[50vh] py-10 lg:py-32">
         <Common.Container>
@@ -94,7 +96,7 @@ import { CONTACT_PAGE_DESCRIPTION } from '@utils/constants'
                                                     </p>
 
                                                     
-                                                 <p class="text-base text-gray-400 mt-1 md:pr-20">
+                                                 {/* <p class="text-base text-gray-400 mt-1 md:pr-20">
                                                 {item.headingThree && (
                                                     <a 
                                                         href={item.headingThree} 
@@ -106,7 +108,7 @@ import { CONTACT_PAGE_DESCRIPTION } from '@utils/constants'
                                                         +2349062014600
                                                     </a>
                                                 )}  
-                                                </p>
+                                                </p> */}
                                                 </div>
                                             </div>
                                         </div>

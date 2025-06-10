@@ -8,6 +8,7 @@ import { sanityClient } from "sanity:client";
 import { PortableText } from "astro-portabletext";
 import { SERVICES_PAGE_DESCRIPTION } from '@utils/constants'
 import { Button } from "@components/common";
+import WhatsAppWidget from "@components/common/Chatbox.tsx";
 export const prerender = true;
 
 
@@ -20,6 +21,7 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
 <Layout title='Services' description={SERVICES_PAGE_DESCRIPTION}>
     <Common.Hero backgroundImage={'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748203425/Service_Page_-_Cover_Image_z5zasp.jpg'} header='Our Services' caption='Explore High-Performance Solar Panels.' />
 
+    <WhatsAppWidget client:load />
     <!-- Get a quote-->
 <div class="w-full flex justify-center mt-10">
         <Button path="/form" className="py-3 px-24 font-bold text-white bg-green rounded-full baseline hover:bg-darkBlue" text="Get a Quote" />

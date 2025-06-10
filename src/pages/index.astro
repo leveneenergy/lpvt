@@ -4,6 +4,7 @@ import { Constants, Data, Queries } from "@utils/index";
 import "@styles/styles.css";
 import type { CollectionEntry } from "astro:content";
 import { sanityClient } from "sanity:client";
+import WhatsAppWidget from "@components/common/Chatbox.tsx";
 
 const projects: CollectionEntry<'projects'>[] = await sanityClient.fetch(Queries.projects)
 const services: CollectionEntry<'services'>[] = await sanityClient.fetch(Queries.services)
@@ -12,6 +13,8 @@ const services: CollectionEntry<'services'>[] = await sanityClient.fetch(Queries
 <Layout>
 	<!-- Carousel -->
 	<Helpers.Carousel client:load />
+
+	<WhatsAppWidget client:load />
 	<!-- Cards -->
 	<section class="absolute z-10 top-[600px] smm:top-[700px] mx-auto w-full pb-10 md:top-[650px]">
 		<Common.Container>
