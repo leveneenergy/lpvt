@@ -5,6 +5,7 @@ import { Constants, Queries } from '@utils/index';
 import type { CollectionEntry } from 'astro:content';
 import { sanityClient } from "sanity:client";
 import { FAQS_PAGE_DESCRIPTION } from '@utils/constants'
+import WhatsAppWidget from "@components/common/Chatbox.tsx";
 
 const faqs = await sanityClient.fetch(Queries.faqs);
 const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
@@ -16,6 +17,7 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
     <!-- Hero Section -->
     <Common.Hero backgroundImage={'/images/faqs_bg.jpg'} header='FAQ' caption='Start the conversation to established good relationship and business.' />
 
+    <WhatsAppWidget client:load />
     <!-- Find your solutions -->
     <section class="w-full min-h-[50vh] md:pt-20 pb-10">
         <Common.Container>
