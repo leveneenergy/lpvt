@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-
 const whatsappLink = 'https://wa.me/2347074913776?text=Hello';
 
 const WhatsAppWidget = () => {
@@ -12,18 +11,26 @@ const WhatsAppWidget = () => {
 
   return (
     <div className="fixed bottom-5 right-5 z-50">
-      {/* Chat Widget Button */}
-      <button
-        onClick={toggleChat}
-        className="bg-[#25D366] hover:bg-green-600 text-white rounded-full p-2 shadow-lg flex items-center justify-center transition-all duration-300"
-        aria-label="Open WhatsApp Chat"
-      >
-        {/* WhatsApp Icon */}
-        <svg className="w-10 h-10" fill="#fff" viewBox="0 0 32 32">
-          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.534.747 4.89 2.037 6.89L4 29l7.293-2.037C13.11 28.253 14.53 29 16 29c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 24c-1.25 0-2.47-.23-3.61-.68l-.26-.1-4.34 1.21 1.21-4.34-.1-.26C6.23 17.47 6 16.25 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.07-7.75c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.71.9-.87 1.08-.16.18-.32.19-.6.07-.28-.14-1.18-.44-2.25-1.57-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.41-.5.13-.17.18-.29.28-.48.09-.19.05-.36-.03-.5-.08-.14-.62-1.5-.85-2.09-.23-.6-.47-.52-.64-.53l-.54-.01c-.17 0-.48.07-.73.33-.25.26-.97 1.01-.97 2.44 0 1.43 1.01 2.82 1.16 3.01.15.19 2.02 3.15 4.9 4.42.6.25 1.07.4 1.44.51.58.18 1.11.16 1.53.1.47-.07 1.46-.62 1.67-1.22.21-.6.21-1.12.15-1.22-.06-.1-.23-.17-.49-.29z"/>
-        </svg>
-        {/* <span className="ml-2 font-semibold">Chat with us</span> */}
-      </button>
+      <div className="flex items-center gap-2">
+        {/*Text Button */}
+        <button
+          onClick={toggleChat}
+          className="bg-white text-black px-3 py-1 rounded-lg font-semibold shadow hover:bg-gray-200 transition-all duration-300"
+          aria-label="Open WhatsApp Chat">
+          Need Help? Chat with us
+        </button>
+        {/* WhatsApp Icon Button */}
+        <button
+          onClick={toggleChat}
+          className="bg-[#25D366] hover:bg-green-600 text-white rounded-full p-2 shadow-lg flex items-center justify-center transition-all duration-300"
+          aria-label="Open WhatsApp Chat">
+            
+          <svg className="w-10 h-10" fill="#fff" viewBox="0 0 32 32">
+            <path d="M16 3C9.373 3 4 8.373 4 15c0 2.534.747 4.89 2.037 6.89L4 29l7.293-2.037C13.11 28.253 14.53 29 16 29c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 24c-1.25 0-2.47-.23-3.61-.68l-.26-.1-4.34 1.21 1.21-4.34-.1-.26C6.23 17.47 6 16.25 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.07-7.75c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.71.9-.87 1.08-.16.18-.32.19-.6.07-.28-.14-1.18-.44-2.25-1.57-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.41-.5.13-.17.18-.29.28-.48.09-.19.05-.36-.03-.5-.08-.14-.62-1.5-.85-2.09-.23-.6-.47-.52-.64-.53l-.54-.01c-.17 0-.48.07-.73.33-.25.26-.97 1.01-.97 2.44 0 1.43 1.01 2.82 1.16 3.01.15.19 2.02 3.15 4.9 4.42.6.25 1.07.4 1.44.51.58.18 1.11.16 1.53.1.47-.07 1.46-.62 1.67-1.22.21-.6.21-1.12.15-1.22-.06-.1-.23-.17-.49-.29z"/>
+          </svg>
+        </button>
+        
+      </div>
 
       {/* Chat Box */}
       {isOpen && (
@@ -62,7 +69,6 @@ const WhatsAppWidget = () => {
               </a>
             </div>
           </div>
-
         </div>
       )}
     </div>
