@@ -107,23 +107,23 @@ export const benefits = [
 
 export const qualifications = [
     {
-        title: 'Mini-Grid Development',
-        description: 'Protect your mini-grid solar projects from import delays and forex risk with solar panels built for local reliability and rapid deployment.',
+        title: 'Reliability and Affordability',
+        description: 'Our solution ensures uninterrupted power and cost-effective solar energy, making clean energy accessible and reducing costs.',
         icon: MdOutlineEnergySavingsLeaf
     },
     {
-        title: 'Industrial Installation',
-        description: 'Access premium solar PV modules at predictable prices with local currency for commercial solar projects to achieve faster turnaround and supply certainty.',
+        title: 'Local Manufacturing',
+        description: 'Our services promote job creation and economic development, ensuring faster delivery and reduced logistical costs.',
         icon: SlBadge
     },
     {
-        title: 'Dealers and Installers',
-        description: 'Boost profitability with high-efficiency solar panels manufactured locally to meet global standards and deliver superior performance.',
+        title: 'Partnerships for Large-scale Projects',
+        description: 'We collaborate with various entities to implement large-scale solar projects, addressing energy poverty and fostering community development.',
         icon: MdOutlineEnergySavingsLeaf
     },
     {
-        title: 'Public Sector Projects',
-        description: 'Meet procurement requirements with top-tier, locally produced solar panels backed by rigorous quality control and a 25-year linear performance warranty.',
+        title: 'Customization',
+        description: 'LPV Technologies offers tailored solar solutions for hybrid, off-grid, and grid-tied systems, ensuring optimal performance.',
         icon: SlSupport
     },
 ]
@@ -220,22 +220,23 @@ export const services = [
     {
         icon: IoSettingsOutline,
         title: 'Built to Scale',
-        description: '200MW capacity with 100MW active production, driving local energy independence'
+        description: 'With a 200MW production capacity, we are driving energy independence across Africa.'
+        
     },
     {
         icon: IoSettingsOutline,
         title: 'Smart & Semi-Automated',
-        description: 'Equipped with a European automated solar manufacturing  line for precision and speed.'
+        description: 'Our precision-driven production line ensures world-class quality, speed, and consistency.'
     },
     {
         icon: IoSettingsOutline,
         title: 'Homegrown Expertise',
-        description: 'Our trained Nigerian team ensures top-quality production and testing every step of the way.'
+        description: 'Led by a highly trained African team, every panel is built to perform and tested for excellence.'
     },
     {
         icon: IoSettingsOutline,
-        title: 'More Than a Plant',
-        description: 'With a showroom, service center, and solar training hub, we’re a full-fledged solar innovation center.'
+        title: 'A Solar Innovation Hub',
+        description: 'We are building Africa energy future, from our showroom and service center to our solar training academy.'
     },
 ]
 
@@ -266,11 +267,12 @@ export const offer = [
     {
         icon: GrServices,
         title: 'Superior Technical Standards',
-        description: 'Advanced PERC monocrystalline solar panel technology ensures high efficiency, minimal degradation, and optimal performance'
+        description: 'Advanced PERC monocrystalline solar panel technology ensures high efficiency, minimal degradation, and optimal performance.'
+        
     },
     {
         icon: GrServices,
-        title: 'Rigorous Quality Assurance ',
+        title: 'Rigorous Quality Assurance',
         description: 'Each panel undergoes multi-stage quality testing, guaranteeing zero-defect delivery and compliance with global standards.'
     },
     {
@@ -283,18 +285,18 @@ export const offer = [
 export const solutions = [
     {
         icon: IoDiamondOutline,
-        title: 'Built for Africa. Backed by Global Standards.',
-        description: 'Engineered to perform in Africa’s demanding conditions without compromising on premium performance. '
+        title: 'Built for Africa, Backed by Technology',
+        description: 'Our panels are crafted to withstand tough conditions and deliver premium performance.'
     },
     {
         icon: IoSettingsOutline,
-        title: 'Locally Manufactured. Powered by Precision.',
-        description: 'Manufactured in our 200MW facility using European-standard technology for unmatched quality and durabilit'
+        title: 'Locally Manufactured, Powered by Excellence',
+        description: 'Assembled locally in our 100MW facility with top European tech, ensuring world-class quality and precision.'
     },
     {
         icon: GiBamboo,
-        title: 'Reliable for the Long Run. Flexible for You.',
-        description: 'Enjoy high uptime, responsive local support, and flexible payment options tailored to your project needs.'
+        title: 'We offer Power and Peace of Mind',
+        description: 'High uptime, reliable support, and flexible payment models tailored to your needs.'
     },
 ]
 
