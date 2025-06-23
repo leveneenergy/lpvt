@@ -11,8 +11,9 @@ interface Props {
 
 <section class={`${page === 'services' ? 'my-0' : 'mt-20'} w-full pt-20 min-h-[60vh] md:min-h-[30vh] xxl:min-h-[100vh] bg-cover bg-no-repeat bg-center lg:pt-40`} style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748207013/Home_Page_-_Live_Green_Love_Green_Think_Green_xqph5y.jpg)'}}>
     <div class="w-[80%] mx-auto flex-col justify-center items-center text-white text-center lg:w-[40%]">
-        <h2 class="text-[32px] leading-[32px] font-bold md:text-[60px] md:leading-[60px]" data-aos='fade-up' data-aos-offset='100'>Live Green, Love Green, Think Green.</h2>
-        <p class="mt-4 text-[14px] md:text-[17px]" data-aos='fade-up' data-aos-delay="100" data-aos-offset='100'>We provide cost-effective solar energy solutions, making clean energy accessible to a wider range of customers, thereby reducing energy costs over time.</p>
+        <h2 class="text-[32px] leading-[32px] font-bold md:text-[60px] md:leading-[60px]" data-aos='fade-up' data-aos-offset='100'>Protect the Planet. Power the Future.  
+</h2>
+        <p class="mt-4 text-[14px] md:text-[17px]" data-aos='fade-up' data-aos-delay="100" data-aos-offset='100'>Our solar panels are responsibly manufactured using high-quality materials and engineered to be environmentally friendly, energy-efficient, and built to last for years. By choosing LPVT, you reduce carbon emissions, support sustainable innovation, and help create a cleaner, greener Africa.</p>
         <!-- <div class="mt-10" data-aos='fade-up' data-aos-delay="200" data-aos-offset='100'>
             <Button path="#" text="Discover more" className="py-3 px-8 text-white text-[16px] bg-green rounded-full baseline hover:bg-darkBlue" />
         </div> -->
@@ -21,12 +22,12 @@ interface Props {
     <div class="w-full h-[300px] md:h-[150px] bg-cyan-900 mt-[100px] lg:mt-[250px] flex justify-center items-center">
         <div class="w-[90%] -mt-[120px] md:w-4/5 h-[100px] grid grid-cols-2 md:grid-cols-4 md:-mt-0">
             <div class="flex flex-col justify-center items-center border-r-2 border-b-2 border-b-gray-500 border-r-gray-500 pb-5 md:pb-0 md:border-b-0">
-                <span class="text-green text-[24px] font-bold"><Counter client:load from={0} to={100} />MW</span>
-                <p class="text-white text-[14px] lg:text-[18px] font-semibold">Utilized Capacity</p>
+                <span class="text-green text-[24px] font-bold"><Counter client:load from={0} to={200} />MW</span>
+                <p class="text-white text-[14px] lg:text-[18px] font-semibold">Production Capacity</p>
             </div>
             <div class="flex flex-col justify-center items-center md:border-r-2 border-b-2 border-b-gray-500 md:border-r-gray-500 pb-5 md:pb-0 md:border-b-0">
                 <span class="text-green text-center text-[24px] font-bold"><Counter client:load from={0} to={600} />Wp</span>
-                <p class="text-white text-[14px] lg:text-[18px] font-semibold">Output</p>
+                <p class="text-white text-[14px] lg:text-[18px] font-semibold">Power Output</p>
             </div>
             <div class="flex flex-col justify-center items-center border-r-2 border-r-gray-500">
                 <span class="text-green text-[24px] font-bold"><Counter client:load from={0} to={180} />K+</span>
