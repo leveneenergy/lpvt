@@ -295,13 +295,14 @@ const ContactForm = () => {
             <>Submit</>
         )}
     </button>
-    <a
-    href="services/"
+   <button
+    type="button"
+    onClick={() => window.history.back()}
     className="block w-[max-content] px-3 py-2 rounded-xl text-base text-center text-white text-[14px] bg-[#0FCC7C] hover:bg-darkBlue cursor-pointer transition ml-16 md:ml-64"
     style={{ textDecoration: 'none' }}
 >
     Go back
-</a>
+</button>
 </div>
 <p className="text-sm text-gray-600  mt-2">*Fill completely before submitting *By submitting, you agree to our Privacy Policy.</p>
            
