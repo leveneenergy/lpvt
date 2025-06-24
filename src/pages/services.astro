@@ -18,7 +18,7 @@ const totalPages: number = Math.ceil(faqs.length / Constants.FAQS_PER_PAGE);
 const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Constants.FAQS_PER_PAGE, currentPage * Constants.FAQS_PER_PAGE)
 ---
 
-<Layout title='Partners&Deals' description={SERVICES_PAGE_DESCRIPTION}>
+<Layout title='Services' description={SERVICES_PAGE_DESCRIPTION}>
     <Common.Hero backgroundImage={'https://res.cloudinary.com/du52ca1q1/image/upload/f_auto,q_auto/v1748203425/Service_Page_-_Cover_Image_z5zasp.jpg'} header='Our Services' caption='Explore High-Performance Solar Panels.' />
 
     <WhatsAppWidget client:load />
