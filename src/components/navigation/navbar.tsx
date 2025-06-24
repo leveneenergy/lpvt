@@ -79,7 +79,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/contact'
         },
         {
-            name: 'More',
+            name: 'Resources',
             path: '#',
             subMenu: [
                 // {
@@ -124,7 +124,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/contact'
         },
         {
-            name: 'More',
+            name: 'Resources',
             path: '#',
             subMenu: [
                 // {
@@ -169,7 +169,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/contact'
         },
         {
-            name: 'More',
+            name: 'Resources',
             path: '#',
             subMenu: [
                 // {
