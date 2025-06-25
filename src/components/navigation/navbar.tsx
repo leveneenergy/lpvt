@@ -52,7 +52,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
         },
         {
             name: 'Partners',
-            path: '/services'
+            path: '/partners'
         },
         {
             name: 'Prooducts',
@@ -107,7 +107,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
         },
         {
             name: 'Partners',
-            path: '/services'
+            path: '/partners'
         },
         {
             name: 'Products',
