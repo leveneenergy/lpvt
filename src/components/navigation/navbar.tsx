@@ -51,8 +51,8 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/about'
         },
         {
-            name: 'Services',
-            path: '/services'
+            name: 'Partners',
+            path: '/partners'
         },
         {
             name: 'Prooducts',
@@ -79,7 +79,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/contact'
         },
         {
-            name: 'More',
+            name: 'Resources',
             path: '#',
             subMenu: [
                 // {
@@ -106,8 +106,8 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/about'
         },
         {
-            name: 'Services',
-            path: '/services'
+            name: 'Partners',
+            path: '/partners'
         },
         {
             name: 'Products',
@@ -124,7 +124,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/contact'
         },
         {
-            name: 'More',
+            name: 'Resources',
             path: '#',
             subMenu: [
                 // {
@@ -169,7 +169,7 @@ const Navbar = ({ serviceList, projectList, productList }: any) => {
             path: '/contact'
         },
         {
-            name: 'More',
+            name: 'Resources',
             path: '#',
             subMenu: [
                 // {
