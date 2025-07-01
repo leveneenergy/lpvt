@@ -38,10 +38,10 @@ const ContactForm = () => {
             if (!contactForm.current) return;
             try {
                 setLoading(true);const mail = await emailjs.sendForm(
-                  import.meta.env.PUBLIC_MAIL_SERVICE_ID as string,
-                  import.meta.env.PUBLIC_MAIL_TEMPLATE_ID as string,
+                  import.meta.env.PUBLIC_MAIL_SERVICE_ID_II as string,
+                  import.meta.env.PUBLIC_MAIL_TEMPLATE_ID_II as string,
                   contactForm.current,
-                  import.meta.env.PUBLIC_MAIL_PUBLIC_KEY as string
+                  import.meta.env.PUBLIC_MAIL_PUBLIC_KEY_II as string
   );  
                 if (mail) {
                     setAlertMessage('Thank you for reaching out to us! Be rest assured we will revert soon');
