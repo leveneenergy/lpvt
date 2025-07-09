@@ -38,4 +38,8 @@
     
 .swiper-button-prev::after {
     display: none;
+} 
+
+article p {
+  margin-bottom: 1.5em;
 }
