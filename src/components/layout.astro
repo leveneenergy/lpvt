@@ -1,38 +1,51 @@
 ---
-import { Navbar, Footer, FooterBanner } from './navigation'
-const { title = 'LPV Technologies' } = Astro.props
-import { LANDING_PAGE_DESCRIPTION } from '@utils/constants'
-import { Cookies } from './common'
+import { Navbar, Footer, FooterBanner } from "./navigation";
+const { title = "LPV Technologies" } = Astro.props;
+import { LANDING_PAGE_DESCRIPTION } from "@utils/constants";
+import { Cookies } from "./common";
 interface Props {
   title?: string;
   description?: string;
 }
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
 import type { CollectionEntry } from "astro:content";
 import { sanityClient } from "sanity:client";
-import { Queries } from '@utils/index';
+import { Queries } from "@utils/index";
 
-const serviceList: CollectionEntry<'services'>[] = await sanityClient.fetch(Queries.services)
-const projectList: CollectionEntry<'projects'>[] = await sanityClient.fetch(Queries.projects)
-const productList: CollectionEntry<'products'>[] = await sanityClient.fetch(Queries.products)
+const serviceList: CollectionEntry<"services">[] = await sanityClient.fetch(
+  Queries.services,
+);
+const projectList: CollectionEntry<"projects">[] = await sanityClient.fetch(
+  Queries.projects,
+);
+const productList: CollectionEntry<"products">[] = await sanityClient.fetch(
+  Queries.products,
+);
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-LVK7YBS73R"></script>
+    <!-- Google Tag Manager -->
     <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-LVK7YBS73R');
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5SQC56X8");
     </script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content={LANDING_PAGE_DESCRIPTION} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={LANDING_PAGE_DESCRIPTION} />
     <title>{title}</title>
     <style>
       * {
@@ -45,22 +58,37 @@ const productList: CollectionEntry<'products'>[] = await sanityClient.fetch(Quer
     </style>
   </head>
   <body>
-      <Navbar client:load serviceList={serviceList} projectList={projectList} productList={productList} />
-      <main>
-          <slot />
-      </main>
-      <Footer />
-      <FooterBanner />
-      <Cookies client:only="react" />
-      <script>
-        import AOS from 'aos';
-        AOS.init({
-          once: true,
-          offset: 100,
-          easing: 'ease-in-out',
-          delay: 50,
-          duration: 1000
-        });
-      </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5SQC56X8"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <Navbar
+      client:load
+      serviceList={serviceList}
+      projectList={projectList}
+      productList={productList}
+    />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <FooterBanner />
+    <Cookies client:only="react" />
+    <script>
+      import AOS from "aos";
+      AOS.init({
+        once: true,
+        offset: 100,
+        easing: "ease-in-out",
+        delay: 50,
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>
