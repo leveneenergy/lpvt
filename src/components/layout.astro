@@ -1,18 +1,17 @@
 ---
 import { Navbar, Footer, FooterBanner } from "./navigation";
-const { title = "LPV Technologies" } = Astro.props;
 import { LANDING_PAGE_DESCRIPTION } from "@utils/constants";
 import { Cookies } from "./common";
+import "aos/dist/aos.css";
+import type { CollectionEntry } from "astro:content";
+import { sanityClient } from "sanity:client";
+import { Queries } from "@utils/index";
 interface Props {
   title?: string;
   description?: string;
 }
-import "aos/dist/aos.css";
-
-import type { CollectionEntry } from "astro:content";
-import { sanityClient } from "sanity:client";
-import { Queries } from "@utils/index";
-
+const { title = "LPV Technologies" } = Astro.props;
+const GTM_ID = import.meta.env.PUBLIC_GTM_ID;
 const serviceList: CollectionEntry<"services">[] = await sanityClient.fetch(
   Queries.services,
 );
@@ -38,10 +37,9 @@ const productList: CollectionEntry<"products">[] = await sanityClient.fetch(
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5SQC56X8");
+      })(window, document, "script", "dataLayer", GTM_ID);
     </script>
     <!-- End Google Tag Manager -->
-
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
@@ -50,7 +48,6 @@ const productList: CollectionEntry<"products">[] = await sanityClient.fetch(
     <style>
       * {
         box-sizing: border-box;
-        /* overflow-x: hidden!important; */
         margin: 0;
         padding: 0;
         scroll-behavior: smooth;
@@ -61,22 +58,19 @@ const productList: CollectionEntry<"products">[] = await sanityClient.fetch(
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5SQC56X8"
+        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
         height="0"
         width="0"
         style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     <Navbar
       client:load
       serviceList={serviceList}
       projectList={projectList}
       productList={productList}
     />
-    <main>
-      <slot />
-    </main>
+    <main><slot /></main>
     <Footer />
     <FooterBanner />
     <Cookies client:only="react" />
