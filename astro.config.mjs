@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { fileURLToPath } from 'node:url';
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import sanity from "@sanity/astro";
@@ -27,6 +28,17 @@ export default defineConfig({
   })],
   devToolbar: {
     enabled: false
+  },
+  vite: {
+    resolve: {
+      alias: {
+        "@components": fileURLToPath(new URL("./src/components", import.meta.url)),
+        "@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
+        "@utils": fileURLToPath(new URL("./src/utils", import.meta.url)),
+        "@styles": fileURLToPath(new URL("./src/styles", import.meta.url)),
+        "@interfaces": fileURLToPath(new URL("./src/interfaces", import.meta.url)),
+      },
+    },
   },
   output: 'server',
   adapter: netlify()

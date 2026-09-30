@@ -1,9 +1,9 @@
 [build]
-   "NODE_OPTIONS='--max-old-space-size=4096' npm run build"
+  command = "NODE_OPTIONS='--max-old-space-size=4096' npm run build"
   publish = "dist"
 
 [[redirects]]
-from = "/lpvtech_admin*"
-to = "/lpvtech_admin"
-status = 301
-force = true
+  from = "/lpvtech_admin/*"
+  to = "/lpvtech_admin"
+  status = 301
+  force = true
