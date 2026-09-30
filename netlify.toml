@@ -3,7 +3,7 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/lpvtech_admin*"
+  from = "/lpvtech_admin/*"
   to = "/lpvtech_admin"
   status = 301
   force = true
