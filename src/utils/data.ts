@@ -399,7 +399,7 @@ export const contactList = [
     {
         icon: SlLocationPin,
         title: 'Head Office',
-        headingOne: '19B, Ilabere Avenue, Off Oyinkan Abayomi Street, Ikoyi',
+        headingOne: '5 Ogalade Close, Victoria Island',
         headingTwo: 'Lagos Nigeria',
     },
     {
