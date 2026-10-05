@@ -26,8 +26,9 @@ const productList: CollectionEntry<"products">[] = await sanityClient.fetch(
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
     <!-- Google Tag Manager -->
-    <script type="text/partytown">
+    <script is:inline define:vars={{ GTM_ID }}>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -40,7 +41,6 @@ const productList: CollectionEntry<"products">[] = await sanityClient.fetch(
       })(window, document, "script", "dataLayer", GTM_ID);
     </script>
     <!-- End Google Tag Manager -->
-    <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={LANDING_PAGE_DESCRIPTION} />
