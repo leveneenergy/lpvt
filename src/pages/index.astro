@@ -6,6 +6,8 @@ import type { CollectionEntry } from "astro:content";
 import { sanityClient } from "sanity:client";
 import WhatsAppWidget from "@components/common/Chatbox.tsx";
 
+export const prerender = true;
+
 const projects: CollectionEntry<'projects'>[] = await sanityClient.fetch(Queries.projects)
 const services: CollectionEntry<'services'>[] = await sanityClient.fetch(Queries.services)
 ---
@@ -68,7 +70,7 @@ const services: CollectionEntry<'services'>[] = await sanityClient.fetch(Queries
 				<!-- Right Image -->
 				<div class="w-full h-full mt-[50px] md:w-2/4 md:mt-[100px]" data-aos='fade-up' data-aos-offset='100' data-aos-duration="500">
 					<div class="relative">
-						<img src='/images/Home-Page-A-Roadmap.jpg' alt={"energy image"} class={"w-full h-full rounded-xl"} />
+						<img src='/images/Home-Page-A-Roadmap.webp' alt={"energy image"} class={"w-full h-full rounded-xl"} />
 					</div>
 					{/* Card */}
 					<div class="absolute -mt-[100px] w-[300px] h-[auto] py-10 px-7 bg-cyan-900 rounded-xl md:-mt-[220px] md:-ml-[30px]" data-aos='zoom-in' data-aos-offset='100' data-aos-delay='100'>

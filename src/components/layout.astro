@@ -71,7 +71,7 @@ const productList: CollectionEntry<"products">[] = await sanityClient.fetch(
       productList={productList}
     />
     <main><slot /></main>
-    <Footer />
+    <Footer productsList={productList} projectsList={projectList} />
     <FooterBanner />
     <Cookies client:only="react" />
     <script>

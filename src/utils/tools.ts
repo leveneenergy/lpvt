@@ -24,3 +24,24 @@ export function formatName(name: string): string {
     
     return result
 }
+
+export function optimizeSanityImageUrl(source: string | undefined, width: number, quality = 75): string {
+    if (!source) {
+        return ''
+    }
+
+    try {
+        const imageUrl = new URL(source)
+        if (imageUrl.hostname !== 'cdn.sanity.io') {
+            return source
+        }
+
+        imageUrl.searchParams.set('auto', 'format')
+        imageUrl.searchParams.set('fit', 'max')
+        imageUrl.searchParams.set('w', String(width))
+        imageUrl.searchParams.set('q', String(quality))
+        return imageUrl.toString()
+    } catch {
+        return source
+    }
+}

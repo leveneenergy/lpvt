@@ -6,11 +6,13 @@ import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
 import { PiInstagramLogo } from "react-icons/pi";
 import { PiArrowUpRight } from "react-icons/pi";
 import { TEAMS_PAGE_DESCRIPTION } from '@utils/constants'
+
+export const prerender = true;
 ---
 
 <Layout title='Teams' description={TEAMS_PAGE_DESCRIPTION}>
     <!-- Hero Section -->
-    <Common.Hero backgroundImage={'/images/technician-checks-maintenance-solar-panels-2.jpg'} header='Team' caption='Alone we can do so little, together we can do so much.' />
+    <Common.Hero backgroundImage={'/images/technician-checks-maintenance-solar-panels-2.webp'} header='Team' caption='Alone we can do so little, together we can do so much.' />
 
     <!-- Team Section -->
     <section class="w-full min-h-[100vh] pt-10 lg:min-h-[50vh] xxl:pt-40">

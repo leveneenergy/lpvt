@@ -6,6 +6,8 @@ import { Queries } from '@utils/index';
 import { sanityClient } from "sanity:client";
 import { POLICY_PAGE_DESCRIPTION } from '@utils/constants'
 
+export const prerender = true;
+
 const policies = await sanityClient.fetch(Queries.policy);
 ---
 

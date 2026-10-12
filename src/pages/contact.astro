@@ -6,12 +6,14 @@ import { Data } from "@utils/index";
 import { FaWhatsapp } from "react-icons/fa";
 import { CONTACT_PAGE_DESCRIPTION } from "@utils/constants";
 import WhatsAppWidget from "@components/common/Chatbox.tsx";
+
+export const prerender = true;
 ---
 
 <Layout title="Contact Us" description={CONTACT_PAGE_DESCRIPTION}>
   <!-- Hero Section -->
   <Common.Hero
-    backgroundImage={"/images/Contact-Page-Cover.jpg"}
+    backgroundImage={"/images/Contact-Page-Cover.webp"}
     header="Contact us"
   />
 

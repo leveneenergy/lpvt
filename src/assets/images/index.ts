@@ -41,11 +41,11 @@ import BlogTwo from "./blog_two.jpg?url"
 import BlogFour from "./blog_four.jpg?url"
 import PrivacyImg from "./privacy.jpg?url"
 import PolicyImage from "./policy.jpg"
-import CarouselSlideOne from './Home-Page-Hero-Image-1D.jpg?url'
-import CarouselSlideTwo from './Home-Page-Hero-Image-2D.jpg?url'
-import CarouselSlideThree from './Home-Page-Hero-Image-3D.jpg?url'
-import CarouselSlideFour from './Home-Page-Hero-Image-4D.jpg?url'
-import CarouselSlideFive from './Home-Page-Hero-Image-6D.jpg?url'
+import CarouselSlideOne from './Home-Page-Hero-Image-1D.webp?url'
+import CarouselSlideTwo from './Home-Page-Hero-Image-2D.webp?url'
+import CarouselSlideThree from './Home-Page-Hero-Image-3D.webp?url'
+import CarouselSlideFour from './Home-Page-Hero-Image-4D.webp?url'
+import CarouselSlideFive from './Home-Page-Hero-Image-6D.webp?url'
 
 export {
     SlideOne,
