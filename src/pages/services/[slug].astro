@@ -1,7 +1,7 @@
 ---
 import { Common, Layout } from "@components/index";
 import { GrServices } from "react-icons/gr";
-import { Constants, Queries } from "@utils/index";
+import { Constants, Queries, Tools } from "@utils/index";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import type { CollectionEntry } from "astro:content";
 import { sanityClient } from "sanity:client";
@@ -20,6 +20,8 @@ if(slug === undefined){
 }
 
 const service = await sanityClient.fetch(Queries.serviceDetails, { slug });
+const serviceHeroImage = Tools.optimizeSanityImageUrl(service.image?.url, 1920)
+const serviceDetailImage = Tools.optimizeSanityImageUrl(service.image?.url, 1000)
 const faqs = await sanityClient.fetch(Queries.faqs);
 const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
 const totalPages: number = Math.ceil(faqs.length / Constants.FAQS_PER_PAGE);
@@ -28,7 +30,7 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
 
 <Layout title='Services' description={SERVICES_PAGE_DESCRIPTION}>
     <!-- Hero Section -->
-    <section class="min-h-[60vh] xxl:min-h-[100vh] pt-24 md:pt-32 w-full bg-no-repeat bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `linear-gradient(rgba(0, 23, 23, 0.6), rgba(0, 23, 23, 0.6)), url(${service.image.url})`}}>
+    <section class="min-h-[60vh] xxl:min-h-[100vh] pt-24 md:pt-32 w-full bg-no-repeat bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `linear-gradient(rgba(0, 23, 23, 0.6), rgba(0, 23, 23, 0.6)), url(${serviceHeroImage})`}}>
         <div class="w-[600px] text-center flex flex-col justify-center items-center">
             <!-- Top Icon -->
             <div class="w-[max-content] p-5 rounded-full" style={{ backgroundImage: 'radial-gradient(at top left, #DDEDC1 0%, #0FCC7C 100%)'}}>
@@ -62,7 +64,7 @@ const faqsInPage: CollectionEntry<'faqs'>[] = faqs.slice((currentPage - 1) * Con
         <Common.Container>
             <div class="flex flex-col lg:flex-row w-full gap-y-5 lg:gap-x-20">
                 <div class="w-full lg:w-[45%]" data-aos='fade-right' data-aos-offset='100'>
-                    <img src={service.image.url} alt="slide_five" class={'w-full h-[auto] lg:h-[300px] rounded-xl'} />
+                    <img src={serviceDetailImage} alt="slide_five" class={'w-full h-[auto] lg:h-[300px] rounded-xl'} />
                 </div>
                 <div class="w-full lg:w-[55%]" data-aos='fade-up' data-aos-offset='100'>
                     <div>

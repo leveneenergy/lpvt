@@ -6,6 +6,9 @@ import { sanityClient } from "sanity:client";
 import { Tools } from "@utils/index";
 import { BLOG_PAGE_DESCRIPTION } from '@utils/constants'
 
+Astro.response.headers.set('Netlify-CDN-Cache-Control', 'public, durable, max-age=60, stale-while-revalidate=300')
+Astro.response.headers.set('Netlify-Vary', 'query=page')
+
 const { tag } = Astro.params;
 if(tag === undefined){
     throw new Error('Tag is required')

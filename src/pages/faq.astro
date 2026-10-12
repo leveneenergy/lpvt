@@ -7,6 +7,9 @@ import { sanityClient } from "sanity:client";
 import { FAQS_PAGE_DESCRIPTION } from '@utils/constants'
 import WhatsAppWidget from "@components/common/Chatbox.tsx";
 
+Astro.response.headers.set('Netlify-CDN-Cache-Control', 'public, durable, max-age=60, stale-while-revalidate=300')
+Astro.response.headers.set('Netlify-Vary', 'query=page')
+
 const faqs = await sanityClient.fetch(Queries.faqs);
 const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
 const totalPages: number = Math.ceil(faqs.length / Constants.FAQS_PER_PAGE);

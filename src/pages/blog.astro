@@ -7,6 +7,9 @@ import type { CollectionEntry } from 'astro:content';
 import { BLOG_PAGE_DESCRIPTION } from '@utils/constants'
 import WhatsAppWidget from "@components/common/Chatbox.tsx";
 
+Astro.response.headers.set('Netlify-CDN-Cache-Control', 'public, durable, max-age=60, stale-while-revalidate=300')
+Astro.response.headers.set('Netlify-Vary', 'query=page')
+
 const articles: CollectionEntry<'blog'>[] = await sanityClient.fetch(Queries.articles)
 const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
 const totalPages: number = Math.ceil(articles.length / Constants.ARTICLES_PER_PAGE);
@@ -15,7 +18,7 @@ const articlesInPage: CollectionEntry<'blog'>[] = articles.slice((currentPage - 
 
 <Layout title='Blog' description={BLOG_PAGE_DESCRIPTION}>
     <!-- Hero Section -->
-    <Common.Hero backgroundImage={'/images/blog_bg.jpg'} header='Article & News' caption='Archives' />
+    <Common.Hero backgroundImage={'/images/blog_bg.webp'} header='Article & News' caption='Archives' />
     <WhatsAppWidget client:load />
 
     <!-- Blog Posts -->

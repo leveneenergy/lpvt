@@ -1,16 +1,18 @@
 ---
 import { Container } from "../common";
 import { LogoDark } from "@assets/images";
-import { Data, Queries } from "@utils/index";
+import { Data } from "@utils/index";
 import { SocialIcons } from "../common";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail, MdOutlineLocationOn } from "react-icons/md";
 import type { CollectionEntry } from "astro:content";
-import { sanityClient } from "sanity:client";
+interface Props {
+    productsList: CollectionEntry<'products'>[];
+    projectsList: CollectionEntry<'projects'>[];
+}
 
-const productsList: CollectionEntry<'products'>[] = await sanityClient.fetch(Queries.products)
-const projectsList: CollectionEntry<'projects'>[] = await sanityClient.fetch(Queries.projects)
+const { productsList, projectsList } = Astro.props
 const footerCompany = productsList.length > 0 && projectsList.length > 0 ? [
     {
         link: 'About Us',

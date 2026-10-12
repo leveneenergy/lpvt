@@ -7,6 +7,8 @@ import type { CollectionEntry } from 'astro:content';
 import { sanityClient } from "sanity:client";
 import { PROJECTS_PAGE_DESCRIPTION } from '@utils/constants'
 
+export const prerender = true;
+
 const projects: CollectionEntry<'projects'>[] = await sanityClient.fetch(Queries.projects)
 ---
 
